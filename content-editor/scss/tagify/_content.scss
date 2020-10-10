@@ -1,0 +1,18 @@
+/* ----------------------------------------------------------------
+CONTENT
+-----------------------------------------------------------------*/
+
+.ce-selected-element{
+    border-radius: 3px ;
+    &:hover, &.btn, &.btn:hover{
+        @extend .ce-selected-element;
+    }
+    box-shadow: 0 0 5px 1px $tag-element-active-bg-color , inset 0 0 5px 1px $tag-element-active-bg-color !important;
+}
+.ce-element-hover{
+    border-radius: 3px;
+    box-shadow: 0 0 5px 1px $selected-color , inset 0 0 5px 1px $selected-color !important;
+    &:hover, &.btn, &.btn:hover{
+        @extend .ce-element-hover;
+    }
+}

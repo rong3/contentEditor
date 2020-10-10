@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <title>Salesteck | Agence digitale</title>
+    <meta name="description" content="">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/app.css?v=3.2">
+    <link rel="stylesheet" href="css/jquery.contenteditor.css">
+    <link rel="stylesheet" href="css/ckeditor.css">
+
+</head>
+
+<body class="no-page-loader breakpoint-xl b--desktop">
+    <div class="body-inner">
+        <button class="bre-btn" style="width: auto;" onclick="Mode('view')">View Mode</button>
+        <button class="bre-btn" style="width: auto;" onclick="Mode('edit')">Edit Mode</button>
+        <button class="bre-btn" style="width: auto;" onclick="Mode('reset')">Reset</button>
+        <div id="contenteditor"></div>
+    </div>
+</body>
+
+<script src="assets/plugins/popper/popper.min.js?v=1.2"></script>
+<script src="assets/js/plugins/_jquery-3.4.1/jquery-3.4.1.min.js"></script>
+<script src="assets/js/plugins.js?v=1.1"></script>
+<script src="assets/js/functions.js?v=1.2"></script>
+
+<script src="assets/js/app.js?v=1.2"></script>
+<script src="assets/js/custom.js?v=1.1"></script>
+<script src="assets/js/pageloader.js?v=1.1"></script>
+<script src="js/jquery.contenteditor.js"></script>
+<script src="js/ckeditor_bak.js"></script>
+
+
+
+<!--<script src="/assets/js/live-chat.js?v=1.1"></script>-->
+<script>
+    $(document).ready(function() {
+        $("#contenteditor").contenteditor({
+            //blocksUrl: 'data.json' || [],
+            blocks: [],
+            templatesUrl: 'templates.html',
+            // htmlToolsButtons: [],
+            onLoad: function(editor) {
+
+            },
+            onChange: function(blocksJson) {
+
+            },
+            onBlockAdd: function(block, idx) {
+
+            },
+            onBlockDelete: function(block, idx) {
+
+            },
+            onBlockMove: function(block, from, to) {
+
+            },
+            onBlockSelect: function(block) {
+
+            },
+            onBlockDeselect: function(block) {
+
+            },
+            onBlockUpdate: function(block, property, oldValue, newValue) {
+                console.log('block: ' + block + ' prop: ' + property + ' new Val ' + newValue);
+            }
+        });
+    });
+</script>
+
+</html>

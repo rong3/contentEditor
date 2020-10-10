@@ -1,0 +1,183 @@
+{
+    "elements" : {
+        "section" : {
+            "text" : false,
+            "variants" : [
+                {
+                    "attr" : {
+                        "id" : "page-title",
+                        "class" : []
+                    },
+                    "desc" : "default page title",
+                    "name" : "",
+                    "parent" : [".body-inner"],
+                    "position" : false,
+                    "template" : "template/section/#page-title.html"
+                },
+                {
+                    "attr" : {
+                        "id" : "",
+                        "class" : []
+                    },
+                    "desc" : "default page title",
+                    "name" : "",
+                    "parent" : [".body-inner"],
+                    "position" : false,
+                    "template" : "template/section/index.html"
+                }
+            ]
+        },
+        "div" : {
+            "text" : false,
+            "variants" : [
+                {
+                    "attr" : {
+                        "id" : "",
+                        "class" : ["container"]
+                    },
+                    "desc" : "default page title",
+                    "name" : "",
+                    "parent" : [".body-inner"],
+                    "position" : false,
+                    "template" : "template/section/#page-title.html"
+                },
+                {
+                    "attr" : {
+                        "id" : "",
+                        "class" : ["container-fluid"]
+                    },
+                    "desc" : "default page title",
+                    "name" : "",
+                    "parent" : [".body-inner"],
+                    "position" : false,
+                    "template" : "template/section/index.html"
+                }
+            ]
+        }
+    },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    "element" : [
+        {
+            "type" : "root",
+            "attr" : {
+
+            },
+            "text" : "",
+            "nodeName" : "section",
+            "parent" : [".body-inner"]
+        },
+        {
+            "type" : "root",
+            "attr" : {
+                "id" : "page-title"
+            },
+            "text" : "",
+            "nodeName" : "section",
+            "parent" : [".body-inner"]
+        },
+
+        {
+            "type" : "block",
+            "nodeName" : "div",
+            "attr" : {
+                "class" : "container"
+            },
+            "text" : "",
+            "parent" : ["section"]
+        },
+        {
+            "type" : "block",
+            "nodeName" : "div",
+            "attr" : {
+                "class" : "container-fluid"
+            },
+            "text" : "",
+            "parent" : ["section"]
+        },
+        {
+            "type" : "block",
+            "nodeName" : "div",
+            "attr" : {
+                "class" : "row"
+            },
+            "text" : "",
+            "parent" : ["div.container", "div.container-fluid"]
+        },
+        {
+            "type" : "block",
+            "nodeName" : "div",
+            "attr" : {
+                "class" : "col-1"
+            },
+            "text" : "",
+            "parent" : ["div.row"]
+        },
+        {
+            "type" : "block",
+            "nodeName" : "div",
+            "attr" : {
+                "class" : "col-1"
+            },
+            "text" : "",
+            "parent" : ["div.row"]
+        },
+        {
+            "type" : "block",
+            "nodeName" : "div",
+            "attr" : {
+                "class" : "col-1"
+            },
+            "text" : "",
+            "parent" : ["div.row"]
+        },
+        {
+            "type" : "block",
+            "nodeName" : "div",
+            "attr" : {
+                "class" : "col-1"
+            },
+            "text" : "",
+            "parent" : ["div.row"]
+        },
+        {
+            "type" : "block",
+            "nodeName" : "div",
+            "attr" : {
+                "class" : "col-1"
+            },
+            "text" : "",
+            "parent" : ["div.row"]
+        },
+        {
+            "type" : "block",
+            "nodeName" : "div",
+            "attr" : {
+                "class" : "col-1"
+            },
+            "text" : "",
+            "parent" : ["div.row"]
+        },
+        {
+            "type" : "block",
+            "nodeName" : "div",
+            "attr" : {
+                "class" : "col-1"
+            },
+            "text" : "",
+            "parent" : ["div.row"]
+        }
+    ]
+}

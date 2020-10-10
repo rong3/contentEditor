@@ -1,0 +1,140 @@
+/* ----------------------------------------------------------------
+MODAL
+-----------------------------------------------------------------*/
+
+body.modal-open {
+    overflow: visible;
+}
+
+
+.ce-tags-modal{
+
+    .modal-header{
+        button.close{
+            &:focus{
+                outline : none;
+            }
+            &:hover{
+
+            }
+        }
+    }
+
+    .modal-body{
+
+
+        .nav,.tab-content{
+            margin: 8px;
+        }
+
+        .nav{
+            a{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                @include color-bg-color(white, red);
+                margin:2px;
+
+                &.disabled{
+                    @include color-bg-color-disabled(white, red);
+                    @include cursor-disabled;
+                }
+
+                &.active, &:hover:not(.disabled){
+                    @include color-bg-color-active(white, red);
+                }
+            }
+        }
+
+        .tab-content{
+            height: 350px;
+            overflow-y: scroll;
+
+            &::-webkit-scrollbar {
+                @include prop-val(display, none);
+            }
+
+            .tab-pane{
+
+                height : 100%;
+                @include border($width : 1px, $style : solid, $color : rgba(0, 0, 0, .1), $radius : 2px);
+                &.class-editor,&.attr-editor{
+                    padding: 8px;
+                }
+
+                textarea{
+                    padding: 8px;
+                    width : 100%;
+                    height : 100%;
+                    font-size: 12px;
+                    @include border($width : 0, $radius : 2px);
+                    background-color: rgba(0, 0, 0, .1);
+
+                    &:focus{
+                        outline: none;
+                    }
+
+                    &:disabled{
+                        color: rgb(170, 170, 170);
+                        background-color: rgba(125, 125, 125, 0.4);
+                        border : unset !important;
+                        @include cursor-disabled;
+                    }
+                }
+                .input-group{
+                    display: flex;
+                    .input-group-append, .input-group-prepend{
+                        .btn{
+                            position: relative;
+                            z-index: 4
+                        };
+                    }
+                }
+
+                .form-control{
+                    border: 1px solid #ced4da !important;
+
+                    &:disabled{
+                        border: $_0 !important;
+                        @include cursor-disabled;
+                    }
+
+                    .is-invalid{
+                        z-index: 3;
+                        border-color: #dc3545 !important;
+                    }
+                }
+
+                .btn{
+                    box-shadow: initial !important;
+                }
+
+                .attr-editor{
+                    .attr-container,
+                    .add-container{
+                        margin-top: 10px;
+                    }
+                }
+
+                .class-editor{
+                    .class-container,
+                    .add-container{
+                        margin-top: 10px;
+                    }
+                    .class-container {
+                        .badge{
+                            padding: 10px;
+                            margin: 2px;
+                            cursor: pointer;
+
+                        }
+                    }
+                }
+
+            }
+
+        }
+    }
+
+}

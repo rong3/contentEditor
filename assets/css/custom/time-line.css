@@ -1,0 +1,116 @@
+
+/*time line css*/
+.main-timeline {
+    font-family: 'Nunito Sans', sans-serif;
+}
+.main-timeline .timeline{
+    margin-bottom: 0 !important;
+    padding: 0 !important;;
+}
+.main-timeline .timeline:before{
+    background-color: transparent;
+}
+
+.main-timeline .timeline-content {
+    background: linear-gradient(to right, #6C4ADC, #9C36BA);
+    padding: 20px 20px 20px 120px;
+    min-height: 120px;
+    display: block;
+    position: relative;
+    z-index: 1;
+}
+
+.main-timeline .timeline-content:hover {
+    text-decoration: none;
+}
+
+.main-timeline .timeline-content:before {
+    content: "";
+    background: #fff;
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.main-timeline .timeline-icon {
+    color: #fff;
+    background: linear-gradient(to bottom, #6C4ADC, #9C36BA);
+    font-size: 40px;
+    text-align: center;
+    line-height: 100px;
+    height: 100px;
+    width: 110px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-clip-path: polygon(100% 0, 100% 70%, 50% 100%, 0 70%, 0 0);
+    clip-path: polygon(100% 0, 100% 70%, 50% 100%, 0 70%, 0 0);
+}
+
+.main-timeline .title {
+    color: #6C4ADC;
+    font-size: 22px;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin: 0 0 5px;
+}
+
+.main-timeline .description {
+    color: #666;
+    font-size: 15px;
+    margin: 0;
+}
+
+.main-timeline .timeline:nth-child(even) .timeline-content {
+    text-align: right;
+    padding: 20px 150px 20px 20px;
+}
+
+.main-timeline .timeline:nth-child(even) .timeline-content:before {
+    left: 7px;
+    right: 0;
+}
+
+.main-timeline .timeline:nth-child(even) .timeline-icon {
+    left: auto;
+    right: 0;
+}
+
+.main-timeline .timeline:nth-child(4n+2) .timeline-icon {
+    background: linear-gradient(to bottom, #9C36BA, #E81C7E);
+}
+
+.main-timeline .timeline:nth-child(4n+2) .timeline-content {
+    background: linear-gradient(to right, #E81C7E, #9C36BA);
+}
+
+.main-timeline .timeline:nth-child(4n+2) .title {
+    color: #9C36BA;
+}
+
+.main-timeline .timeline:nth-child(4n+3) .timeline-icon {
+    background: linear-gradient(to bottom, #E81C7E, #EE5167);
+}
+
+.main-timeline .timeline:nth-child(4n+3) .timeline-content {
+    background: linear-gradient(to right, #E81C7E, #EE5167);
+}
+
+.main-timeline .timeline:nth-child(4n+3) .title {
+    color: #E81C7E;
+}
+
+.main-timeline .timeline:nth-child(4n+4) .timeline-icon {
+    background: linear-gradient(to bottom, #EE5167, #FA964A);
+}
+
+.main-timeline .timeline:nth-child(4n+4) .timeline-content {
+    background: linear-gradient(to right, #FA964A, #EE5167);
+}
+
+.main-timeline .timeline:nth-child(4n+4) .title {
+    color: #EE5167;
+}

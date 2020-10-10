@@ -1,0 +1,83 @@
+/* ----------------------------------------------------------------
+TAGS
+-----------------------------------------------------------------*/
+.ce-tags{
+    min-height : 50px;
+    height : auto;
+    padding: 5px 20px;
+    @include color-bg-color($bg-color : $tags-container-color);
+    position: fixed;
+    bottom: $_0;
+    width : 100%;
+    z-index: $z-index;
+    display: flex;
+    align-items: center;
+    @include box-shadow($box-shadow);
+    @include transition-all-ease($transition_ease);
+
+    &:hover{
+        @include box-shadow-hover($box-shadow-hover);
+    }
+
+    span.tag{
+        vertical-align: middle;
+        @include transform(scale(2) rotate(135deg));
+    }
+
+    >.btn{
+        height: $tag-element-height !important;
+        padding: 0.375rem 0.75rem !important;
+        min-width: 50px;
+        line-height: 14px!important;
+
+        &:first-of-type{
+            margin-right: 5px !important;
+        }
+
+        &:disabled{
+            @include cursor-disabled;
+        }
+    }
+
+    .ce-tags-container{
+        margin-left: 10px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+
+        .ce-tags-element{
+            display : inline-block;
+            height: $tag-element-height;
+            cursor: pointer;
+            margin: $_0 25px $_0 $_0;
+            padding: $_0 7px 0 14px;
+            position: relative;
+            @include color-bg-color(#963, $tag-element-bg-color);
+            @include prop-val(line-height, $tag-element-height);
+            font: bold 11px/#{$tag-element-height} Arial, Tahoma, sans-serif;
+            text-decoration: none;
+            border-radius: 3px $_0 $_0 3px;
+
+            &:after{
+                position: absolute;
+                right: -$tag-element-height/2;
+                content: '';
+                height: $tag-element-height;
+                width: $tag-element-height/2;
+                border-top: $tag-element-height/2 solid transparent;
+                border-bottom: $tag-element-height/2 solid transparent;
+                border-left: $tag-element-height/2 solid $tag-element-bg-color;
+            }
+
+            &.active{
+                @include color-bg-color(#f0f0f0, $tag-element-active-bg-color);
+
+                &:after{
+                    border-left-color: $tag-element-active-bg-color;
+                }
+            }
+        }
+    }
+
+}

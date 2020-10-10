@@ -1,0 +1,415 @@
+/*  app */
+/* ----------------------------------------------------------------
+CONTENT-EDITOR
+-----------------------------------------------------------------*/
+.ce-tools {
+  position: fixed;
+  text-align: center;
+  z-index: 100;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  max-height: 80%;
+  min-height: 100px;
+  height: auto;
+  max-width: 100px;
+  width: 0;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  -webkit-transition: all 0.25s ease-in-out !important;
+  -moz-transition: all 0.25s ease-in-out !important;
+  -ms-transition: all 0.25s ease-in-out !important;
+  -o-transition: all 0.25s ease-in-out !important;
+  transition: all 0.25s ease-in-out !important;
+}
+.ce-tools:hover, .ce-tools.active {
+  width: 100%;
+  z-index: 100;
+  -webkit-box-shadow: 0 -20px 40px rgba(0, 0, 0, 0.12), 0 10px 20px rgba(0, 0, 0, 0.24) !important;
+  -moz-box-shadow: 0 -20px 40px rgba(0, 0, 0, 0.12), 0 10px 20px rgba(0, 0, 0, 0.24) !important;
+  -ms-box-shadow: 0 -20px 40px rgba(0, 0, 0, 0.12), 0 10px 20px rgba(0, 0, 0, 0.24) !important;
+  -o-box-shadow: 0 -20px 40px rgba(0, 0, 0, 0.12), 0 10px 20px rgba(0, 0, 0, 0.24) !important;
+  box-shadow: 0 -20px 40px rgba(0, 0, 0, 0.12), 0 10px 20px rgba(0, 0, 0, 0.24) !important;
+}
+.ce-tools:hover .ce-tools-container, .ce-tools.active .ce-tools-container {
+  z-index: 100;
+}
+.ce-tools:hover .ce-tools-btn, .ce-tools.active .ce-tools-btn {
+  z-index: 99;
+  -webkit-box-shadow: 0 -20px 40px rgba(0, 0, 0, 0.12), 0 10px 20px rgba(0, 0, 0, 0.24) !important;
+  -moz-box-shadow: 0 -20px 40px rgba(0, 0, 0, 0.12), 0 10px 20px rgba(0, 0, 0, 0.24) !important;
+  -ms-box-shadow: 0 -20px 40px rgba(0, 0, 0, 0.12), 0 10px 20px rgba(0, 0, 0, 0.24) !important;
+  -o-box-shadow: 0 -20px 40px rgba(0, 0, 0, 0.12), 0 10px 20px rgba(0, 0, 0, 0.24) !important;
+  box-shadow: 0 -20px 40px rgba(0, 0, 0, 0.12), 0 10px 20px rgba(0, 0, 0, 0.24) !important;
+}
+.ce-tools:hover .ce-tools-btn a, .ce-tools.active .ce-tools-btn a {
+  transform: scaleX(-1);
+}
+.ce-tools .ce-tools-container {
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+  background-color: white;
+  border-right: 1px solid rgba(255, 0, 0, 0.2);
+  height: 100%;
+  padding: 10px;
+  min-height: 100px;
+}
+.ce-tools .ce-tools-container button {
+  display: block;
+  padding: 8px 12px;
+  border-radius: 6px;
+  margin: 4px 0;
+  width: 100%;
+  border: 1px solid red;
+}
+.ce-tools .ce-tools-container button i {
+  display: inline;
+  margin: auto;
+}
+.ce-tools .ce-tools-container button span {
+  margin: 0 4px;
+}
+.ce-tools .ce-tools-btn {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  position: absolute;
+  width: 30px;
+  right: -30px;
+  background-color: white;
+  border-radius: 0 8px 8px 0;
+  -webkit-box-shadow: 0 -10px 15px rgba(0, 0, 0, 0.12), 0 10px 20px rgba(0, 0, 0, 0.24) !important;
+  -moz-box-shadow: 0 -10px 15px rgba(0, 0, 0, 0.12), 0 10px 20px rgba(0, 0, 0, 0.24) !important;
+  -ms-box-shadow: 0 -10px 15px rgba(0, 0, 0, 0.12), 0 10px 20px rgba(0, 0, 0, 0.24) !important;
+  -o-box-shadow: 0 -10px 15px rgba(0, 0, 0, 0.12), 0 10px 20px rgba(0, 0, 0, 0.24) !important;
+  box-shadow: 0 -10px 15px rgba(0, 0, 0, 0.12), 0 10px 20px rgba(0, 0, 0, 0.24) !important;
+  -webkit-transition: all 0.25s ease-in-out !important;
+  -moz-transition: all 0.25s ease-in-out !important;
+  -ms-transition: all 0.25s ease-in-out !important;
+  -o-transition: all 0.25s ease-in-out !important;
+  transition: all 0.25s ease-in-out !important;
+}
+.ce-tools .ce-tools-btn a {
+  margin: auto;
+  -webkit-transition: all 0.25s ease-in-out !important;
+  -moz-transition: all 0.25s ease-in-out !important;
+  -ms-transition: all 0.25s ease-in-out !important;
+  -o-transition: all 0.25s ease-in-out !important;
+  transition: all 0.25s ease-in-out !important;
+}
+
+/*  panels */
+/* ----------------------------------------------------------------
+PANELS
+-----------------------------------------------------------------*/
+.ce-panels {
+  position: fixed;
+  text-align: center;
+  z-index: 100;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  max-height: 80%;
+  min-height: 100px;
+  height: auto;
+  max-width: 100px;
+  width: 0;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  -webkit-transition: all 0.25s ease-in-out !important;
+  -moz-transition: all 0.25s ease-in-out !important;
+  -ms-transition: all 0.25s ease-in-out !important;
+  -o-transition: all 0.25s ease-in-out !important;
+  transition: all 0.25s ease-in-out !important;
+}
+.ce-panels:hover, .ce-panels.active {
+  width: 100%;
+  z-index: 100;
+  -webkit-box-shadow: 0 -20px 40px rgba(0, 0, 0, 0.12), 0 10px 20px rgba(0, 0, 0, 0.24) !important;
+  -moz-box-shadow: 0 -20px 40px rgba(0, 0, 0, 0.12), 0 10px 20px rgba(0, 0, 0, 0.24) !important;
+  -ms-box-shadow: 0 -20px 40px rgba(0, 0, 0, 0.12), 0 10px 20px rgba(0, 0, 0, 0.24) !important;
+  -o-box-shadow: 0 -20px 40px rgba(0, 0, 0, 0.12), 0 10px 20px rgba(0, 0, 0, 0.24) !important;
+  box-shadow: 0 -20px 40px rgba(0, 0, 0, 0.12), 0 10px 20px rgba(0, 0, 0, 0.24) !important;
+}
+.ce-panels:hover .ce-panels-container, .ce-panels.active .ce-panels-container {
+  z-index: 100;
+}
+.ce-panels:hover .ce-panels-btn, .ce-panels.active .ce-panels-btn {
+  z-index: 99;
+  -webkit-box-shadow: 0 -20px 40px rgba(0, 0, 0, 0.12), 0 10px 20px rgba(0, 0, 0, 0.24) !important;
+  -moz-box-shadow: 0 -20px 40px rgba(0, 0, 0, 0.12), 0 10px 20px rgba(0, 0, 0, 0.24) !important;
+  -ms-box-shadow: 0 -20px 40px rgba(0, 0, 0, 0.12), 0 10px 20px rgba(0, 0, 0, 0.24) !important;
+  -o-box-shadow: 0 -20px 40px rgba(0, 0, 0, 0.12), 0 10px 20px rgba(0, 0, 0, 0.24) !important;
+  box-shadow: 0 -20px 40px rgba(0, 0, 0, 0.12), 0 10px 20px rgba(0, 0, 0, 0.24) !important;
+}
+.ce-panels:hover .ce-panels-btn a, .ce-panels.active .ce-panels-btn a {
+  transform: scaleX(-1);
+}
+.ce-panels .ce-panels-container {
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+  background-color: white;
+  border-left: 1px solid rgba(255, 0, 0, 0.2);
+  height: 100%;
+  padding: 10px;
+  min-height: 100px;
+}
+.ce-panels .ce-panels-container button {
+  display: block;
+  padding: 8px 12px;
+  border-radius: 6px;
+  margin: 4px 0;
+  width: 100%;
+  border: 1px solid red;
+}
+.ce-panels .ce-panels-container button i {
+  display: inline;
+  margin: auto;
+}
+.ce-panels .ce-panels-container button span {
+  margin: 0 4px;
+}
+.ce-panels .ce-panels-btn {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  position: absolute;
+  width: 30px;
+  left: -30px;
+  background-color: white;
+  border-radius: 6px 0 0 6px;
+  -webkit-box-shadow: 0 -10px 15px rgba(0, 0, 0, 0.12), 0 10px 20px rgba(0, 0, 0, 0.24) !important;
+  -moz-box-shadow: 0 -10px 15px rgba(0, 0, 0, 0.12), 0 10px 20px rgba(0, 0, 0, 0.24) !important;
+  -ms-box-shadow: 0 -10px 15px rgba(0, 0, 0, 0.12), 0 10px 20px rgba(0, 0, 0, 0.24) !important;
+  -o-box-shadow: 0 -10px 15px rgba(0, 0, 0, 0.12), 0 10px 20px rgba(0, 0, 0, 0.24) !important;
+  box-shadow: 0 -10px 15px rgba(0, 0, 0, 0.12), 0 10px 20px rgba(0, 0, 0, 0.24) !important;
+  -webkit-transition: all 0.25s ease-in-out !important;
+  -moz-transition: all 0.25s ease-in-out !important;
+  -ms-transition: all 0.25s ease-in-out !important;
+  -o-transition: all 0.25s ease-in-out !important;
+  transition: all 0.25s ease-in-out !important;
+}
+.ce-panels .ce-panels-btn a {
+  margin: auto;
+  -webkit-transition: all 0.25s ease-in-out !important;
+  -moz-transition: all 0.25s ease-in-out !important;
+  -ms-transition: all 0.25s ease-in-out !important;
+  -o-transition: all 0.25s ease-in-out !important;
+  transition: all 0.25s ease-in-out !important;
+}
+
+/*  tags */
+/* ----------------------------------------------------------------
+TAGS
+-----------------------------------------------------------------*/
+.ce-tags {
+  min-height: 50px;
+  height: auto;
+  padding: 5px 20px;
+  background-color: #c4c4c4 !important;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 1050;
+  display: flex;
+  align-items: center;
+  -webkit-box-shadow: 0 -10px 15px rgba(0, 0, 0, 0.12), 0 10px 20px rgba(0, 0, 0, 0.24) !important;
+  -moz-box-shadow: 0 -10px 15px rgba(0, 0, 0, 0.12), 0 10px 20px rgba(0, 0, 0, 0.24) !important;
+  -ms-box-shadow: 0 -10px 15px rgba(0, 0, 0, 0.12), 0 10px 20px rgba(0, 0, 0, 0.24) !important;
+  -o-box-shadow: 0 -10px 15px rgba(0, 0, 0, 0.12), 0 10px 20px rgba(0, 0, 0, 0.24) !important;
+  box-shadow: 0 -10px 15px rgba(0, 0, 0, 0.12), 0 10px 20px rgba(0, 0, 0, 0.24) !important;
+  -webkit-transition: all 0.25s ease-in-out !important;
+  -moz-transition: all 0.25s ease-in-out !important;
+  -ms-transition: all 0.25s ease-in-out !important;
+  -o-transition: all 0.25s ease-in-out !important;
+  transition: all 0.25s ease-in-out !important;
+}
+.ce-tags:hover {
+  -webkit-box-shadow: 0 -20px 40px rgba(0, 0, 0, 0.12), 0 10px 20px rgba(0, 0, 0, 0.24) !important;
+  -moz-box-shadow: 0 -20px 40px rgba(0, 0, 0, 0.12), 0 10px 20px rgba(0, 0, 0, 0.24) !important;
+  -ms-box-shadow: 0 -20px 40px rgba(0, 0, 0, 0.12), 0 10px 20px rgba(0, 0, 0, 0.24) !important;
+  -o-box-shadow: 0 -20px 40px rgba(0, 0, 0, 0.12), 0 10px 20px rgba(0, 0, 0, 0.24) !important;
+  box-shadow: 0 -20px 40px rgba(0, 0, 0, 0.12), 0 10px 20px rgba(0, 0, 0, 0.24) !important;
+}
+.ce-tags span.tag {
+  vertical-align: middle;
+  -webkit-transform: scale(2) rotate(135deg);
+  -moz-transform: scale(2) rotate(135deg);
+  -ms-transform: scale(2) rotate(135deg);
+  -o-transform: scale(2) rotate(135deg);
+  transform: scale(2) rotate(135deg);
+}
+.ce-tags > .btn {
+  height: 30px !important;
+  padding: 0.375rem 0.75rem !important;
+  min-width: 50px;
+  line-height: 14px !important;
+}
+.ce-tags > .btn:first-of-type {
+  margin-right: 5px !important;
+}
+.ce-tags > .btn:disabled {
+  cursor: not-allowed;
+  pointer-events: auto;
+}
+.ce-tags .ce-tags-container {
+  margin-left: 10px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.ce-tags .ce-tags-container .ce-tags-element {
+  display: inline-block;
+  height: 30px;
+  cursor: pointer;
+  margin: 0 25px 0 0;
+  padding: 0 7px 0 14px;
+  position: relative;
+  background-color: #FEC95B !important;
+  color: #963 !important;
+  line-height: 30px;
+  font: bold 11px/30px Arial, Tahoma, sans-serif;
+  text-decoration: none;
+  border-radius: 3px 0 0 3px;
+}
+.ce-tags .ce-tags-container .ce-tags-element:after {
+  position: absolute;
+  right: -15px;
+  content: "";
+  height: 30px;
+  width: 15px;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-left: 15px solid #FEC95B;
+}
+.ce-tags .ce-tags-container .ce-tags-element.active {
+  background-color: #4076fe !important;
+  color: #f0f0f0 !important;
+}
+.ce-tags .ce-tags-container .ce-tags-element.active:after {
+  border-left-color: #4076fe;
+}
+
+/*  modal */
+/* ----------------------------------------------------------------
+MODAL
+-----------------------------------------------------------------*/
+body.modal-open {
+  overflow: visible;
+}
+
+.ce-tags-modal .modal-header button.close:focus {
+  outline: none;
+}
+.ce-tags-modal .modal-body .nav, .ce-tags-modal .modal-body .tab-content {
+  margin: 8px;
+}
+.ce-tags-modal .modal-body .nav a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: red !important;
+  color: white !important;
+  margin: 2px;
+}
+.ce-tags-modal .modal-body .nav a.disabled {
+  background-color: #ff4d4d !important;
+  color: white !important;
+  cursor: not-allowed;
+  pointer-events: auto;
+}
+.ce-tags-modal .modal-body .nav a.active, .ce-tags-modal .modal-body .nav a:hover:not(.disabled) {
+  background-color: #b30000 !important;
+  color: #d9d9d9 !important;
+}
+.ce-tags-modal .modal-body .tab-content {
+  height: 350px;
+  overflow-y: scroll;
+}
+.ce-tags-modal .modal-body .tab-content::-webkit-scrollbar {
+  display: none;
+}
+.ce-tags-modal .modal-body .tab-content .tab-pane {
+  height: 100%;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+}
+.ce-tags-modal .modal-body .tab-content .tab-pane.class-editor, .ce-tags-modal .modal-body .tab-content .tab-pane.attr-editor {
+  padding: 8px;
+}
+.ce-tags-modal .modal-body .tab-content .tab-pane textarea {
+  padding: 8px;
+  width: 100%;
+  height: 100%;
+  font-size: 12px;
+  border-width: 0;
+  border-radius: 2px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.ce-tags-modal .modal-body .tab-content .tab-pane textarea:focus {
+  outline: none;
+}
+.ce-tags-modal .modal-body .tab-content .tab-pane textarea:disabled {
+  color: #aaaaaa;
+  background-color: rgba(125, 125, 125, 0.4);
+  border: unset !important;
+  cursor: not-allowed;
+  pointer-events: auto;
+}
+.ce-tags-modal .modal-body .tab-content .tab-pane .input-group {
+  display: flex;
+}
+.ce-tags-modal .modal-body .tab-content .tab-pane .input-group .input-group-append .btn, .ce-tags-modal .modal-body .tab-content .tab-pane .input-group .input-group-prepend .btn {
+  position: relative;
+  z-index: 4;
+}
+.ce-tags-modal .modal-body .tab-content .tab-pane .form-control {
+  border: 1px solid #ced4da !important;
+}
+.ce-tags-modal .modal-body .tab-content .tab-pane .form-control:disabled {
+  border: 0 !important;
+  cursor: not-allowed;
+  pointer-events: auto;
+}
+.ce-tags-modal .modal-body .tab-content .tab-pane .form-control .is-invalid {
+  z-index: 3;
+  border-color: #dc3545 !important;
+}
+.ce-tags-modal .modal-body .tab-content .tab-pane .btn {
+  box-shadow: initial !important;
+}
+.ce-tags-modal .modal-body .tab-content .tab-pane .attr-editor .attr-container,
+.ce-tags-modal .modal-body .tab-content .tab-pane .attr-editor .add-container {
+  margin-top: 10px;
+}
+.ce-tags-modal .modal-body .tab-content .tab-pane .class-editor .class-container,
+.ce-tags-modal .modal-body .tab-content .tab-pane .class-editor .add-container {
+  margin-top: 10px;
+}
+.ce-tags-modal .modal-body .tab-content .tab-pane .class-editor .class-container .badge {
+  padding: 10px;
+  margin: 2px;
+  cursor: pointer;
+}
+
+/*  content */
+/* ----------------------------------------------------------------
+CONTENT
+-----------------------------------------------------------------*/
+.ce-selected-element, .ce-selected-element:hover, .ce-selected-element.btn, .ce-selected-element.btn:hover {
+  border-radius: 3px;
+  box-shadow: 0 0 5px 1px #4076fe, inset 0 0 5px 1px #4076fe !important;
+}
+.ce-element-hover, .ce-element-hover:hover, .ce-element-hover.btn, .ce-element-hover.btn:hover {
+  border-radius: 3px;
+  box-shadow: 0 0 5px 1px green, inset 0 0 5px 1px green !important;
+}
+
+/*# sourceMappingURL=content-editor.css.map */

@@ -1,0 +1,97 @@
+/* ----------------------------------------------------------------
+CONTENT-EDITOR
+-----------------------------------------------------------------*/
+.ce-tools{
+
+
+    position: fixed;
+    text-align: center;
+    z-index: 100;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    max-height: 80%;
+    min-height: $min-height;
+    height: auto;
+    max-width: 100px;
+    width: 0;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    @include transition-all-ease($transition_ease);
+
+
+    &:hover, &.active{
+        width: 100%;
+        z-index: 100;
+        @include box-shadow-hover($box-shadow-hover);
+
+        .ce-tools-container{
+            z-index: 100;
+        }
+
+        .ce-tools-btn{
+            z-index: 99;
+            @include box-shadow-hover($box-shadow-hover);
+
+            a{
+
+                transform: scaleX(-1);
+            }
+        }
+    }
+
+    .ce-tools-container{
+
+        align-items: center;
+        width: 100%;
+        overflow: hidden;
+        background-color: white;
+        border-right: 1px solid rgba(255, 0, 0, 0.2);
+        height: 100%;
+        padding: 10px;
+        min-height: $min-height;
+
+        button{
+
+            display: block;
+            padding: 8px 12px;
+            border-radius : 6px;
+            margin: 4px 0;
+            width: 100%;
+            border: 1px solid rgba(255, 0, 0, 1);
+
+            i{
+                display: inline;
+                margin: auto;
+            }
+
+            span{
+                margin: 0 4px;
+            }
+        }
+
+    }
+
+    .ce-tools-btn{
+
+        display: flex;
+        height: 100%;
+        align-items: center;
+        position: absolute;
+        width: 30px;
+        right: -30px;
+        background-color: white;
+        border-radius: 0 8px 8px 0;
+        @include box-shadow($box-shadow);
+        @include transition-all-ease($transition_ease);
+
+        a{
+            margin: auto;
+            @include transition-all-ease($transition_ease);
+        }
+
+
+    }
+
+}
